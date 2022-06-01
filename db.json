@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "name": "san pham so 1 udpate",
+      "price": 999,
+      "images": "12314",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "san pham so 1",
+      "images": "12314",
+      "price": 999
+    },
+    {
+      "id": 3,
+      "name": "san pham so 1",
+      "images": "12314",
+      "price": 999
+    },
+    {
+      "name": "san pham new",
+      "price": "9",
+      "images": "jsnadjkd",
+      "id": 6
+    },
+    {
+      "name": "san phaarm mowis",
+      "price": "99",
+      "images": "kljkjsskjf",
+      "id": 7
+    },
+    {
+      "name": "san",
+      "price": "88",
+      "images": "oi;aid",
+      "id": 8
+    },
+    {
+      "name": "a",
+      "price": 22,
+      "images": "asdsad",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "password": "123123",
+      "id": 1
+    }
+  ]
+}

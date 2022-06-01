@@ -1,0 +1,19 @@
+
+<form nz-form nzLayout="vertical" #formAdd="ngForm" (ngSubmit)="submitForm(formAdd)" class="d-flex align-center flex-col">
+    <h1 class="w-100 d-flex justify-center">Sign up</h1>
+    <nz-form-item class="w-50">
+        <nz-form-label><strong>Username</strong></nz-form-label>
+        <nz-form-control nzValidatingTip="Validating...">
+            <input nz-input  name="username" placeholder="Tên sản phẩm" class="w-100" ngModel/>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="w-50">
+        <nz-form-label><strong>Password: </strong></nz-form-label>
+        <nz-form-control nzValidatingTip="Validating...">
+            <input nz-input name="password" placeholder="VD: 99 999" class="w-100" ngModel/>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="w-50 d-flex justify-start">
+        <button nz-button nzType="primary">Submit</button>
+    </nz-form-item>
+</form>
