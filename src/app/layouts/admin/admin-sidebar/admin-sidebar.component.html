@@ -7,16 +7,13 @@
         </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-        <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+        <li nz-submenu nzOpen nzTitle="Products Manager" nzIcon="dashboard">
             <ul>
-                <li nz-menu-item nzMatchRouter>
-                    <a routerLink="/welcome">Welcome</a>
+                <li nz-menu-item>
+                    <a routerLink="products">List products</a>
                 </li>
-                <li nz-menu-item nzMatchRouter>
-                    <a>Monitor</a>
-                </li>
-                <li nz-menu-item nzMatchRouter>
-                    <a>Workplace</a>
+                <li nz-menu-item>
+                    <a routerLink="products/add">Add products</a>
                 </li>
             </ul>
         </li>
