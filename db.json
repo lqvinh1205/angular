@@ -25,22 +25,28 @@
       "id": 6
     },
     {
-      "name": "san phaarm mowis",
-      "price": "99",
-      "images": "kljkjsskjf",
+      "name": "ádasd",
+      "price": 22,
+      "images": "ádads",
       "id": 7
     },
     {
-      "name": "san",
-      "price": "88",
-      "images": "oi;aid",
+      "name": "a",
+      "price": 2,
+      "images": "â",
       "id": 8
     },
     {
-      "name": "a",
+      "name": "ss",
       "price": 22,
-      "images": "asdsad",
+      "images": "â",
       "id": 9
+    },
+    {
+      "name": "22",
+      "price": 222,
+      "images": "222",
+      "id": 10
     }
   ],
   "comments": [
@@ -52,8 +58,13 @@
   ],
   "users": [
     {
-      "username": "admin",
-      "password": "123123",
+      "email": "member@gmail.com",
+      "password": "$2a$10$UQkZdTYWnFOTvZU9uCV5ouZQ6Jes3ez/HgNQ1EuROeClEEcFnlhB6",
+      "id": 2
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$SzZKgqnkcgdGPKEITCa9zOGGsCRcNe7MItINwsnnW/iPUCP55pIOS",
       "id": 1
     }
   ]

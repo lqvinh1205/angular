@@ -7,7 +7,7 @@ import { ProductElement } from '../shared/models/products.model';
   providedIn: 'root'
 })
 export class ProductsService {
-  API_URL = "http://localhost:3000/products"
+  API_URL = "http://localhost:3001/products"
   constructor(private http: HttpClient) { }
   getAllProducts(): Observable<ProductElement[]> {
     return this.http.get<ProductElement[]>(this.API_URL)

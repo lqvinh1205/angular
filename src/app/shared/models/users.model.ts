@@ -1,5 +1,5 @@
 export interface UserElement {
-    id: number,
-    username: string,
+    id?: number,
+    email: string,
     password: string
 }

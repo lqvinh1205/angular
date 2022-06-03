@@ -15,7 +15,7 @@ export class SignUpComponent implements OnInit {
   submitForm(formAdd: NgForm) {
     console.log(formAdd.value);
     this.UserService.signup(formAdd.value).subscribe(() => {
-      this.router.navigateByUrl("/")
+      this.router.navigateByUrl("/login")
     });
   }
 }

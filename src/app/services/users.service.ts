@@ -5,13 +5,16 @@ import { Observable } from 'rxjs';
 import { UserElement } from '../shared/models/users.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsersService {
-  API_URL = "http://localhost:3000/users"
+  API_URL = 'http://localhost:3001/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   signup(data: UserElement): Observable<UserElement> {
-    return this.http.post<UserElement>(this.API_URL, data)
+    return this.http.post<UserElement>(this.API_URL + 'signup', data);
+  }
+  signin(data: any) {
+    return this.http.post(this.API_URL + 'signin', data);
   }
 }
