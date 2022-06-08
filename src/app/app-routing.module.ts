@@ -3,7 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/' },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./features/customer/customer.module').then(
+        (m) => m.CustomerModule
+      ),
+  },
   {
     path: 'admin',
     loadChildren: () =>
