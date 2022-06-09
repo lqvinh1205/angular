@@ -18,8 +18,8 @@
 
 @media (max-width: 425px) {
     .footer {
-        margin-top: 145px;
-        height: 182px;
+        margin-top: 80px;
+        height: 100px;
         align-items: center;
     }
 }
