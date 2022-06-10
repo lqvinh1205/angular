@@ -44,13 +44,14 @@
   .project-items-title h4 {
     font-size: 30px;
     font-weight: bold !important;
-    margin-top: -15px;
+    margin-top: -10px;
     letter-spacing: -1px;
   }
   .project-item-info {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
+    align-items: center;
     /* padding-bottom: 19px; */
   }
   .project-item-details {
@@ -75,8 +76,7 @@
   .category {
     padding-left: 27px;
     width: 60%;
-    font-size: 18px;
-    margin-top: -3px;
+    font-size: 14px;
     letter-spacing: 1px;
     color: #acacac;
     display: flex;
@@ -118,6 +118,6 @@
       font-size: 16px;
     }
     .category {
-      font-size: 16px;
+      font-size: 12px;
     }
   }
