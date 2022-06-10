@@ -10,6 +10,9 @@ import { AntdDesignModule } from 'src/app/antd-design/antd-design.module';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjectUpdateComponent } from './projects/project-update/project-update.component';
+import { ProjectAddComponent } from './projects/project-add/project-add.component';
+import { ProjectListComponent } from './projects/project-list/project-list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductsListComponent,
     ProductsAddComponent,
     ProductsUpdateComponent,
+    ProjectUpdateComponent,
+    ProjectAddComponent,
+    ProjectListComponent,
   ],
   imports: [
     CommonModule,

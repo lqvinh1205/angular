@@ -2,26 +2,26 @@
 
 
 <form nz-form nzLayout="vertical" #formAdd="ngForm" (ngSubmit)="submitHandler(formAdd)" class="d-flex align-center flex-col">
-    <h2 class="w-100 d-flex justify-center">Fill content to form</h2>
+    <h2 class="w-100 d-flex justify-center title-form">Fill content to form</h2>
     <nz-form-item class="w-50">
         <nz-form-label><strong>Name Product: </strong></nz-form-label>
         <nz-form-control nzValidatingTip="Validating...">
-            <input nz-input  name="name" placeholder="Tên sản phẩm" class="w-100" ngModel/>
+            <input nz-input  name="name" placeholder="Tên sản phẩm" class="input-flied" ngModel/>
         </nz-form-control>
     </nz-form-item>
     <nz-form-item class="w-50">
         <nz-form-label><strong>Price: </strong></nz-form-label>
         <nz-form-control nzValidatingTip="Validating...">
-            <input nz-input type="number"  name="price" placeholder="VD: 99 999" class="w-100" ngModel/>
+            <input nz-input type="number" name="price" placeholder="VD: 99 999" class="input-flied" ngModel/>
         </nz-form-control>
     </nz-form-item>
     <nz-form-item class="w-50">
         <nz-form-label><strong>Images: </strong></nz-form-label>
         <nz-form-control nzValidatingTip="Validating...">
-            <input nz-input  name="images" placeholder="http://...." class="w-100" ngModel/>
+            <input nz-input  name="images" placeholder="http://...." class="input-flied" ngModel/>
         </nz-form-control>
     </nz-form-item>
     <nz-form-item class="w-50 d-flex justify-start">
-        <button nz-button nzType="primary">Submit</button>
+        <button class="h-40px" nz-button nzType="primary">Submit</button>
     </nz-form-item>
 </form>

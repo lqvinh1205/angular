@@ -1,3 +1,31 @@
 .form-sign-up {
-    padding-top: 10%;
- }
+  padding: 50px 60px;
+  padding-bottom: 100px;
+  border: 1px solid #acacac;
+  border-radius: 10px;
+  display: block;
+  background: #fff;
+}
+.btn-login {
+  background: #ff6464;
+  border: none;
+  height: 40px;
+}
+.title-login {
+  font-weight: bold;
+  /* color: #ff6464; */
+}
+.inp-login {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgb(205, 55, 55), rgb(237, 237, 237));
+
+}

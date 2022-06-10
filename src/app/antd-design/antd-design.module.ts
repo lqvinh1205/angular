@@ -9,6 +9,9 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzNotificationModule } from 'ng-zorro-antd/notification';
+
 
 @NgModule({
   exports: [
@@ -20,6 +23,9 @@ import { NzFormModule } from 'ng-zorro-antd/form';
     NzGridModule,
     NzSpaceModule,
     NzFormModule,
+    NzModalModule,
+    NzIconModule,
+    NzNotificationModule
   ],
 })
 export class AntdDesignModule {}

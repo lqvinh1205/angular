@@ -27,6 +27,7 @@ export class AuthGuard implements CanActivate {
       }
     }
     window.alert("Khong the truy cap !")
+    window.location.href = "/login"
     return false;
   }
 }
