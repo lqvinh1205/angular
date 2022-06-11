@@ -1,0 +1,34 @@
+<h2>Projects List</h2>
+<div class="d-flex justify-between mb-2">
+    <a routerLink='add'><button nz-button nzType="primary" class="mb-2">Add Product</button></a>
+    <button nz-button nzType="primary" class="mb-2 btn-excel" (click)="exportexcel()">Export Excel</button>
+</div>
+<nz-table nzTemplateMode [nzData]='data' id="data-contact">
+    <thead>
+        <tr>
+            <th nzWidth="5%">STT</th>
+            <th nzWidth="20%">Name Customer</th>
+            <th nzWidth="10%">Email</th>
+            <th nzWidth="10%">Phone</th>
+            <th nzWidth="25%">Content</th>
+            <th nzWidth="10%">Create At</th>
+            <th nzWidth="20%" nz-row nzJustify="center">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data" nzJustify="end">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.phone }}</td>
+            <td>{{ item.content }}</td>
+            <td>{{ item.createAt }}</td>
+            <td>
+                <div nz-row nzJustify="end">
+                    <a routerLink='edit/{{item.id}}'><button nz-button nzType="primary" class="mr-2">Edit</button></a>
+                    <button nz-button nzType="primary" nzDanger (click)="handlerRemove(item.id)">Delete</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>

@@ -47,6 +47,9 @@ h1, h2, h3, h4, h5, h6, p, span {
 .justify-start {
   justify-content: start;
 }
+.justify-between {
+  justify-content: space-between;
+}
 .justify-end {
   justify-content: end;
 }

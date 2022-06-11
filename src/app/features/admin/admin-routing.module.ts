@@ -4,6 +4,7 @@ import { AdminLayoutComponent } from 'src/app/layouts/admin/admin-layout/admin-l
 import { BlogAddComponent } from './blogs/blog-add/blog-add.component';
 import { BlogListComponent } from './blogs/blog-list/blog-list.component';
 import { BlogUpdateComponent } from './blogs/blog-update/blog-update.component';
+import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InfomationComponent } from './infomation/infomation.component';
 import { ProductsAddComponent } from './products/products-add/products-add.component';
@@ -49,6 +50,10 @@ const routes: Routes = [
       {
         path: 'infomation',
         component: InfomationComponent
+      },
+      {
+        path: 'contacts',
+        component: ContactListComponent
       },
     ],
   },

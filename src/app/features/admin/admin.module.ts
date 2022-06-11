@@ -18,6 +18,7 @@ import { BlogUpdateComponent } from './blogs/blog-update/blog-update.component';
 import { BlogListComponent } from './blogs/blog-list/blog-list.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { InfomationComponent } from './infomation/infomation.component';
+import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { InfomationComponent } from './infomation/infomation.component';
     BlogUpdateComponent,
     BlogListComponent,
     InfomationComponent,
+    ContactListComponent,
   ],
   imports: [
     CommonModule,

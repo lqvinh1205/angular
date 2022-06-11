@@ -9,6 +9,9 @@ import { MyProjectComponent } from './component/my-project/my-project.component'
 import { WorkPagesComponent } from './work-pages/work-pages.component';
 import { BlogPagesComponent } from './blog-pages/blog-pages.component';
 import { WorkPagesDetailComponent } from './work-pages-detail/work-pages-detail.component';
+import { ContactPagesComponent } from './contact-pages/contact-pages.component';
+import { AntdDesignModule } from 'src/app/antd-design/antd-design.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,11 +22,15 @@ import { WorkPagesDetailComponent } from './work-pages-detail/work-pages-detail.
     MyProjectComponent,
     WorkPagesComponent,
     BlogPagesComponent,
-    WorkPagesDetailComponent
+    WorkPagesDetailComponent,
+    ContactPagesComponent
   ],
   imports: [
     CommonModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    AntdDesignModule,
+    ReactiveFormsModule, //Add if needed
+    FormsModule,
   ]
 })
 export class CustomerModule { }

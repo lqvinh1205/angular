@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="w-50">
+        <div>
+            <h2 nz-col [nzSpan]="24" class="title-form">Contact Us</h2>
+        </div>
+        <div class="subTitle">
+            <p>Find out how Adamo Software can help you and your business reach new levels of success. We would be happy
+                to discuss the possibilities at your convenience.</p>
+        </div>
+    </div>
+    <form nz-form nzLayout="vertical" [formGroup]="myForm" (ngSubmit)="submitHandler()">
+        <div>
+        </div>
+        <div nz-row [nzGutter]="[30]">
+            <div nz-col [nzSpan]="12">
+                <nz-form-item>
+                    <nz-form-label><strong>Your name: </strong></nz-form-label>
+                    <nz-form-control nzValidatingTip="Validating...">
+                        <input nz-input name="name" placeholder="your name" class="input-flied"
+                            formControlName="name" />
+                        <!-- BOX ERROR START -->
+                        <div *ngFor="let validation of validation_messages.name" class="err-box">
+                            <div class="error-message" *ngIf="myForm.controls['name'].errors && (myForm.controls['name'].errors[validation.type] && 
+                                (myForm.controls['name'].dirty || myForm.controls['name'].touched ))">
+                                {{validation.message}}
+                            </div>
+                        </div>
+                        <!-- BOX ERROR END -->
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="12">
+                <nz-form-item>
+                    <nz-form-label><strong>Email: </strong></nz-form-label>
+                    <nz-form-control nzValidatingTip="Validating...">
+                        <input nz-input name="email" placeholder="a@gmail.com" class="input-flied"
+                            formControlName="email" />
+                        <!-- BOX ERROR START -->
+                        <div *ngFor="let validation of validation_messages.email" class="err-box">
+                            <div class="error-message" *ngIf="myForm.controls['email'].errors && (myForm.controls['email'].errors[validation.type] && 
+                                (myForm.controls['email'].dirty || myForm.controls['email'].touched ))">
+                                {{validation.message}}
+                            </div>
+                        </div>
+                        <!-- BOX ERROR END -->
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col [nzSpan]="12">
+                <nz-form-item>
+                    <nz-form-label><strong>Number Phone: </strong></nz-form-label>
+                    <nz-form-control nzValidatingTip="Validating...">
+                        <input nz-input name="phone" placeholder="+84 ..." class="input-flied"
+                            formControlName="phone" />
+                        <!-- BOX ERROR START -->
+                        <div *ngFor="let validation of validation_messages.phone" class="err-box">
+                            <div class="error-message" *ngIf="myForm.controls['phone'].errors && (myForm.controls['phone'].errors[validation.type] && 
+                                (myForm.controls['phone'].dirty || myForm.controls['phone'].touched ))">
+                                {{validation.message}}
+                            </div>
+                        </div>
+                        <!-- BOX ERROR END -->
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            
+            <div nz-col [nzSpan]="24">
+                <nz-form-item>
+                    <nz-form-label><strong>Content: </strong></nz-form-label>
+                    <nz-form-control nzValidatingTip="Validating...">
+                        <textarea nz-input name="content" placeholder="...." class="input-flied area-flied"
+                            formControlName="content"></textarea>
+                        <!-- BOX ERROR START -->
+                        <div *ngFor="let validation of validation_messages.content" class="err-box">
+                            <div class="error-message" *ngIf="myForm.controls['content'].errors && (myForm.controls['content'].errors[validation.type] && 
+                                (myForm.controls['content'].dirty || myForm.controls['content'].touched ))">
+                                {{validation.message}}
+                            </div>
+                        </div>
+                        <!-- BOX ERROR END -->
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col [nzSpan]="24">
+                <nz-form-item class="d-flex justify-end" nz-col [nzSpan]="3">
+                    <button class="h-40px" nz-button nzType="primary" [disabled]="!myForm.valid">Submit</button>
+                </nz-form-item>
+            </div>
+        </div>
+    </form>
+
+</div>
