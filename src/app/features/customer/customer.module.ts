@@ -12,6 +12,7 @@ import { WorkPagesDetailComponent } from './work-pages-detail/work-pages-detail.
 import { ContactPagesComponent } from './contact-pages/contact-pages.component';
 import { AntdDesignModule } from 'src/app/antd-design/antd-design.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BlogPagesDetailComponent } from './blog-pages-detail/blog-pages-detail.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     WorkPagesComponent,
     BlogPagesComponent,
     WorkPagesDetailComponent,
-    ContactPagesComponent
+    ContactPagesComponent,
+    BlogPagesDetailComponent
   ],
   imports: [
     CommonModule,
