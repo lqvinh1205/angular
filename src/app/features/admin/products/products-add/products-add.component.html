@@ -1,18 +1,26 @@
 <h3>Form add Products</h3>
 
 
-<form nz-form nzLayout="vertical" #formAdd="ngForm" (ngSubmit)="submitHandler(formAdd)" class="d-flex align-center flex-col">
+<form nz-form nzLayout="vertical" #myForm="ngForm" (ngSubmit)="submitHandler(myForm)" class="d-flex align-center flex-col">
     <h2 class="w-100 d-flex justify-center title-form">Fill content to form</h2>
     <nz-form-item class="w-50">
         <nz-form-label><strong>Name Product: </strong></nz-form-label>
         <nz-form-control nzValidatingTip="Validating...">
-            <input nz-input  name="name" placeholder="Tên sản phẩm" class="input-flied" ngModel/>
+            <input nz-input  name="name" placeholder="Tên sản phẩm" class="input-flied" ngModel #name="ngModel" required minlength="5"/>
+            <div *ngIf="name.invalid && (name.dirty || name.touched )" class="alert">
+                <span *ngIf="name.errors?.['required']" class="error-message">Đây là trường bắt buộc</span>
+                <span *ngIf="name.errors?.['minlength']" class="error-message">Tối thiểu 5 ký tự</span>
+            </div>
         </nz-form-control>
     </nz-form-item>
     <nz-form-item class="w-50">
         <nz-form-label><strong>Price: </strong></nz-form-label>
         <nz-form-control nzValidatingTip="Validating...">
-            <input nz-input type="number" name="price" placeholder="VD: 99 999" class="input-flied" ngModel/>
+            <input nz-input type="number" name="price" placeholder="VD: 99 999" class="input-flied" ngModel required min="1" #price="ngModel"/>
+            <div *ngIf="price.invalid && (price.dirty || price.touched)">
+                <span class="error-message" *ngIf="price.errors?.['required']">Day la truong bat buoc</span>
+                <span class="error-message" *ngIf="price.errors?.['min']">Gia lon hon 0</span>
+            </div>
         </nz-form-control>
     </nz-form-item>
     <nz-form-item class="w-50">

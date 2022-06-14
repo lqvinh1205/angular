@@ -6,7 +6,7 @@
     </div>
     <div class="project-main">
         <div *ngFor="let item of data">
-            <a routerLink="{{ item.id }}">
+            <a routerLink="work/{{ item.id }}">
                 <div class="project-items">
                     <div class="project-item-avatar">
                         <img src="{{item.images}}" alt="">

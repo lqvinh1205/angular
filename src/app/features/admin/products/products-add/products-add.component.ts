@@ -16,12 +16,7 @@ export class ProductsAddComponent implements OnInit {
     private ProductService: ProductsService,
     private router: Router
   ) {}
-  myForm: ProductElement = {
-    id: 0,
-    name: '',
-    price: 0,
-    images: '',
-  };
+  
   ngOnInit(): void {
     
   }
