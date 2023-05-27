@@ -1,0 +1,52 @@
+<h3>Form update Products</h3>
+
+
+<form nz-form nzLayout="vertical" [formGroup]="myForm" (ngSubmit)="submitHandler()" class="d-flex align-center flex-col"
+    novalidate>
+    <h2 class="w-100 d-flex justify-center">Fill content to form</h2>
+    <nz-form-item class="w-50">
+        <nz-form-label><strong>Name Product: </strong></nz-form-label>
+        <nz-form-control nzValidatingTip="Validating...">
+            <input nz-input formControlName="name" placeholder="Tên sản phẩm" class="input-flied" />
+            <!-- BOX ERROR START -->
+            <div *ngFor="let validation of validation_messages.name">
+                <div class="error-message" *ngIf="myForm.controls['name'].errors && (myForm.controls['name'].errors[validation.type] && 
+                    (myForm.controls['name'].dirty || myForm.controls['name'].touched ))">
+                    {{validation.message}}
+                </div>
+            </div>
+            <!-- BOX ERROR END -->
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="w-50">
+        <nz-form-label><strong>Price: </strong></nz-form-label>
+        <nz-form-control nzValidatingTip="Validating...">
+            <input nz-input type="number" formControlName="price" placeholder="VD: 99 999" class="input-flied" />
+            <!-- BOX ERROR START -->
+            <div *ngFor="let validation of validation_messages.price">
+                <div class="error-message" *ngIf="myForm.controls['price'].errors && (myForm.controls['price'].errors[validation.type] && 
+                    (myForm.controls['price'].dirty || myForm.controls['price'].touched ))">
+                    {{validation.message}}
+                </div>
+            </div>
+            <!-- BOX ERROR END -->
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="w-50">
+        <nz-form-label><strong>Images: </strong></nz-form-label>
+        <nz-form-control nzValidatingTip="Validating...">
+            <input nz-input formControlName="images" placeholder="http://...." class="input-flied" />
+            <!-- BOX ERROR START -->
+            <div *ngFor="let validation of validation_messages.images">
+                <div class="error-message" *ngIf="myForm.controls['images'].errors && (myForm.controls['images'].errors[validation.type] && 
+                    (myForm.controls['images'].dirty || myForm.controls['images'].touched ))">
+                    {{validation.message}}
+                </div>
+            </div>
+            <!-- BOX ERROR END -->
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="w-50 d-flex justify-start">
+        <button nz-button nzType="primary" class="h-40px" [disabled]="!myForm.valid">Submit</button>
+    </nz-form-item>
+</form>

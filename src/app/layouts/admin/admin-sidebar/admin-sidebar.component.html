@@ -1,0 +1,50 @@
+<nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null">
+    <div class="sidebar-logo">
+        <a href="https://ng.ant.design/" target="_blank">
+            <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+            <h1>Ant Design Of Angular</h1>
+        </a>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+        <li nz-submenu nzOpen nzTitle="Products Manager" nzIcon="dashboard">
+            <ul>
+                <li nz-menu-item>
+                    <a routerLink="products">List products</a>
+                </li>
+                <li nz-menu-item>
+                    <a routerLink="products/add">Add products</a>
+                </li>
+            </ul>
+        </li>
+        <li nz-submenu nzOpen nzTitle="Projects Manager" nzIcon="form">
+            <ul>
+                <li nz-menu-item>
+                    <a routerLink="projects">List Project</a>
+                </li>
+                <li nz-menu-item>
+                    <a routerLink="projects/add">Add Project</a>
+                </li>
+            </ul>
+        </li>
+        <li nz-submenu nzOpen nzTitle="Blogs Manager" nzIcon="form">
+            <ul>
+                <li nz-menu-item>
+                    <a routerLink="blogs">List Blog</a>
+                </li>
+                <li nz-menu-item>
+                    <a routerLink="blogs/add">Add Blog</a>
+                </li>
+            </ul>
+        </li>
+        <li nz-menu-item nz-tooltip nzTooltipPlacement="right">
+            <i nz-icon nzType="form"></i>
+            <span><a routerLink="infomation">Infomation</a></span>
+        </li>
+        <li nz-menu-item nz-tooltip nzTooltipPlacement="right">
+            <i nz-icon nzType="form"></i>
+            <span><a routerLink="contacts">Contacts Manager</a></span>
+        </li>
+      
+    </ul>
+</nz-sider>
