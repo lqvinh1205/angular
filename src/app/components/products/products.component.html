@@ -1,0 +1,32 @@
+<div class="container">
+    <h3>List Products</h3>
+    <a routerLink="add"><button class="btn btn-primary mb-3">Add products</button></a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Ten san pham</th>
+                <th>Gia san pham</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productsList; let i=index">
+                <td class="col-1">{{i + 1}}</td>
+                <td class="col-7">{{ product.name }}</td>
+                <td class="col-2">{{ product.price }}</td>
+                <td class="col-2 text-end">
+                    <button class="btn btn-danger me-2" (click)="handlerRemove(product.id)">Delete</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info" (click)="onHandleGetInfo(product.id)">Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <div *ngIf="productDetails">
+        <app-product-detail [data]="productDetails"></app-product-detail>
+    </div>
+    <h2>Products Add</h2>
+    <hr />
+    <app-add-product></app-add-product> -->
+</div>
+<app-modal-details></app-modal-details>

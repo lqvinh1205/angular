@@ -1,0 +1,12 @@
+<h3 class="text-center">Add products</h3>
+<form class="container offset-3 col-6" #formAdd="ngForm" (ngSubmit)="onSubmit(formAdd)" novalidate>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name Products</label>
+        <input type="text" class="form-control" name="name" ngModel>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Price</label>
+        <input type="number" class="form-control" name="price" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
